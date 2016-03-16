@@ -11,6 +11,11 @@ app.use(express.static(__dirname + "/../client"));
 app.get("/sports", (req, res) => {
 	let sports = mongoUtil.sports();
 	sports.find({}).toArray((err, docs) => {
+
+		if (err) {
+			res.sendStatus(400);
+		}
+		
 		console.log(JSON.stringify(docs));
 		let sportNames = docs.map((sport) => sport.name);
 		res.json(sportNames);
