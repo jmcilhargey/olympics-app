@@ -1,16 +1,45 @@
 [
   {
-    "name": "Cycling",
+    "name": "Athletics",
     "goldMedals": [
-      { "division": "Men's Sprint", "country": "UK", "year": 2012 },
-      { "division": "Women's Sprint", "country": "Australia", "year": 2012 }
+      { "division": "Men's 100 metres", "country": "Jamaica", "year": 2012 },
+      { "division": "Men's 400 metres", "country": "Grenada", "year": 2012 },
+      { "division": "Men's 800 metres", "country": "Kenya", "year": 2012 },
+      { "division": "Decathlon", "country": "United States", "year": 2012 },
+      { "division": "Women's 100 metres", "country": "Jamaica", "year": 2012 },
+      { "division": "Women's 1500 metres", "country": "Turkey", "year": 2012 },
+      { "division": "Women's 400 metres hurdles", "country": "Russia", "year": 2012 },
+      { "division": "Women's 4×100 metres relay", "country": "United States", "year": 2012 }
     ]
   },
   {
+    "name": "Cycling",
+    "goldMedals": [
+      { "division": "Men's road race", "country": "Columbia", "year": 2012 },
+      { "division": "Men's time trial", "country": "United Kingdom", "year": 2012 },
+      { "division": "Women's road race", "country": "Netherlands", "year": 2012 },
+      { "division": "Women's time trial", "country": "United States", "year": 2012 }
+    ]
+  },
+  {
+    "name": "Swimming",
+    "goldMedals": [
+      { "division": "Men's 50 m freestyle", "country": "France", "year": 2012 },
+      { "division": "Men's 100 m freestyle", "country": "United States", "year": 2012 },
+      { "division": "Men's 200 m individual medley", "country": "United States", "year": 2012 },
+      { "division": "Women's 200 m freestyle", "country": "United States", "year": 2012 },
+      { "division": "Women's 100 m backstroke", "country": "United States", "year": 2012 },
+      { "division": "Women's 4×100 m freestyle", "country": "Australia", "year": 2012 }
+    ]
+  },  
+  {
     "name": "Weightlifting",
     "goldMedals": [
-      { "division": "Men's Heavyweight", "country": "Ukraine", "year": 2012 },
-      { "division": "Women's Heavyweight", "country": "Kazakhstan", "year": 2012 }
+      { "division": "Men's 69 kg", "country": "China", "year": 2012 },
+      { "division": "Men's 85 kg", "country": "Poland", "year": 2012 },
+      { "division": "Men's +105 kg", "country": "Iran", "year": 2012 },
+      { "division": "Women's 58 kg", "country": "China", "year": 2012 },
+      { "division": "Women's 63 kg", "country": "Kazakhstan", "year": 2012 }
     ]
   }
 ]

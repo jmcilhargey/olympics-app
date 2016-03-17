@@ -1,14 +1,27 @@
 <!DOCTYPE html>
-<html ng-app="olympics">
-	<head>
-		<meta charset="utf-8">
-		<title>Olympic Medal Tracker</title>
-	</head>
-	<body>
-		<h1>Olympic Medal Tracker</h1>
+<html lang="en" ng-app="olympics">
+<head>
+  	<meta charset="utf-8">
+  	<title>Olympic Medal Tracker</title>
+  	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700,300,400italic">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  	<link rel="stylesheet" href="styles/app.css">
+  	<style>
+    [ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
+      display: none !important;
+    }
+  	</style>
+</head>
+<body>
+  	<div class="header">
+    	<div class="cell">
+      	<h1 class="logo">Olympic Medal Tracker</h1>
+        <img class="rings" src="./images/olympicrings.svg" width="200px">
+      </div>
+  	</div>
 
-		<div ui-view></div>
+    <div class="cell" ui-view></div>
 
-		<script src="dist/bundle.js"></script>
-	</body>
+    <script src="dist/bundle.js"></script>
+</body>
 </html>

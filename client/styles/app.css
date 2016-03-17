@@ -1,0 +1,228 @@
+body {
+  background: white;
+  color: #333;
+  font-family: 'Lato', Helvetica, Arial, sans-serif;
+  font-size: 18px;
+  line-height: 1.5;
+}
+
+h1, h2, h3,
+h4, h5, h6 {
+  font-weight: 300;
+  margin-bottom: 10px;
+  margin-top: 0;
+}
+
+h1 {
+  font-size: 50px;
+}
+
+a {
+  color: #ef8354;
+  text-decoration: none;
+}
+
+.btn {
+  background-color: #ef8354;
+  border: 0;
+  border-radius: 8px;
+  color: white;
+  display: inline-block;
+  line-height: 2.5;
+  padding: 0 40px;
+  transition: 0.2s ease-in-out;
+}
+
+.btn:active,
+.btn:focus,
+.btn:hover {
+  background-color: #d6774e;
+}
+
+.card {
+  border: 1px solid #bfc0c0;
+  border-radius: 8px;
+  display: block;
+  overflow: hidden;
+  transition: 0.2s ease-in-out;
+}
+
+.card:active,
+.card:focus,
+.card:hover {
+  border-color: #808080;
+}
+
+.card.is-active {
+  background-color: #2d3142;
+  border-color: #2d3142;
+}
+
+.card.is-active .card-link {
+  color: #ef8354;
+}
+
+.card-link {
+  color: #bfc0c0;
+  display: block;
+  padding: 20px;
+  position: relative;
+  transition: 0.2s ease-in-out;
+}
+
+.card-link::after {
+  background-position: right center;
+  background-repeat: no-repeat;
+  background-size: 50%;
+  bottom: 0;
+  content: '';
+  display: block;
+  opacity: 0.1;
+  position: absolute;
+  right: 10px;
+  top: 0;
+  transition: 0.2s ease-in-out;
+}
+
+.card-link--cycling::after {
+  background-image: url('../images/icon-cycling.svg');
+  width: 200px;
+}
+
+.card-link--weightlifting::after {
+  background-image: url('../images/icon-weightlifting.svg');
+  width: 200px;
+}
+
+.card-link--athletics::after {
+  background-image: url('../images/icon-athletics.svg');
+  width: 200px;
+}
+
+.card-link--swimming::after {
+  background-image: url('../images/icon-swimming.svg');
+  width: 200px;
+}
+
+.card-link:active,
+.card-link:focus,
+.card-link:hover {
+  color: #808080;
+  text-decoration: none;
+}
+
+.card-title {
+  margin-bottom: 0;
+}
+
+.cell {
+  margin: 0 auto;
+  max-width: 900px;
+}
+
+.form-field {
+  align-items: center;
+  display: flex;
+  margin-bottom: 20px;
+}
+
+.form-input,
+.form-control {
+  border: 1px solid #bfc0c0;
+  border-radius: 8px;
+  box-sizing: border-box;
+  flex-basis: 50%;
+  padding: 10px;
+  width: 100%;
+}
+
+.form-input:focus,
+.form-control:focus {
+  border-color: #ef8354;
+  outline: none;
+  box-shadow: none;
+}
+
+.form-label {
+  flex-basis: 15%;
+}
+
+.grid {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.grid-box--6of12 {
+  flex-basis: 45%;
+  margin: 10px 20px 10px 0;
+}
+
+.header {
+  background-color: #2d3142;
+  margin-bottom: 40px;
+  padding: 40px;
+  padding-top: 100px;
+}
+
+.list {
+  margin-bottom: 20px;
+}
+
+.list--unstyled {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.logo {
+  color: #fff;
+  margin-bottom: 0;
+  margin-right: 20px;
+  display: inline-block;
+}
+
+.table {
+  border: 1px solid #bfc0c0;
+  border-collapse: inherit;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  width: 100%;
+}
+
+.table thead,
+.table td {
+  border-right: 1px solid #bfc0c0;
+  border-top: 1px solid #bfc0c0;
+  font-size: 14px;
+  line-height: 1.5;
+  padding: 10px 20px;
+  vertical-align: top;
+}
+
+.table thead:last-child,
+.table td:last-child {
+  border-right: 0;
+}
+
+.table thead {
+  border-top: 0;
+  text-align: left;
+}
+
+.table th {
+  border-right: 1px solid #bfc0c0;
+  padding: 10px 20px;
+  text-align: left;
+}
+
+.table th:last-child {
+  border-right: 0;
+}
+
+.mbm {
+  margin-bottom: 20px;
+}
+
+.mbl {
+  margin-bottom: 40px;
+}

@@ -35,7 +35,6 @@ app.get("/sports/:name", (req, res) => {
 			res.sendStatus(400);
 		}
 
-		console.log("Sport doc: " + doc);
 		res.json(doc);
 	});
 });
