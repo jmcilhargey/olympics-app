@@ -29,7 +29,8 @@ a {
   color: white;
   display: inline-block;
   line-height: 2.5;
-  padding: 0 40px;
+  padding: 5px 50px;
+  margin-bottom: 10px;
   transition: 0.2s ease-in-out;
 }
 
@@ -70,38 +71,19 @@ a {
   transition: 0.2s ease-in-out;
 }
 
-.card-link::after {
+.card-image {
   background-position: right center;
   background-repeat: no-repeat;
   background-size: 50%;
   bottom: 0;
   content: '';
   display: block;
-  opacity: 0.1;
+  opacity: 0.25;
   position: absolute;
+  height: 75px;
   right: 10px;
   top: 0;
   transition: 0.2s ease-in-out;
-}
-
-.card-link--cycling::after {
-  background-image: url('../images/icon-cycling.svg');
-  width: 200px;
-}
-
-.card-link--weightlifting::after {
-  background-image: url('../images/icon-weightlifting.svg');
-  width: 200px;
-}
-
-.card-link--athletics::after {
-  background-image: url('../images/icon-athletics.svg');
-  width: 200px;
-}
-
-.card-link--swimming::after {
-  background-image: url('../images/icon-swimming.svg');
-  width: 200px;
 }
 
 .card-link:active,
@@ -112,12 +94,12 @@ a {
 }
 
 .card-title {
-  margin-bottom: 0;
+  margin: 0;
 }
 
 .cell {
   margin: 0 auto;
-  max-width: 900px;
+  max-width: 70em;
 }
 
 .form-field {
@@ -153,19 +135,27 @@ a {
 }
 
 .grid-box--6of12 {
-  flex-basis: 45%;
-  margin: 10px 20px 10px 0;
+  flex-basis: 30%;
+  margin: 10px;
+}
+
+@media screen and (max-width: 52em) {
+  .grid-box--6of12 {
+    flex-basis: 45%;
+  }
+}
+
+@media screen and (max-width: 40em) {
+  .grid-box--6of12 {
+    flex-basis: 100%;
+  }
 }
 
 .header {
+  display: flex;
   background-color: #2d3142;
-  margin-bottom: 40px;
-  padding: 40px;
-  padding-top: 100px;
-}
-
-.list {
-  margin-bottom: 20px;
+  padding: 3em 0 2em;
+  margin-bottom: 2em;
 }
 
 .list--unstyled {
@@ -175,10 +165,19 @@ a {
 }
 
 .logo {
+  flex: 1 1 auto;
   color: #fff;
-  margin-bottom: 0;
-  margin-right: 20px;
+  margin: 0 20px 0 10px;
   display: inline-block;
+  vertical-align: middle;
+}
+
+.rings {
+  flex: 1 1 auto;
+}
+
+.sports-info {
+  margin: 0 10px;
 }
 
 .table {

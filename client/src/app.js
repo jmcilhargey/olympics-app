@@ -19,7 +19,8 @@ angular.module("olympics", ["ui.router"])
 				this.sports = sportsService.data;
 
 				this.isActive = function(sport) {
-					let pathRegexp = /sports\/(\w+)/;
+					
+					let pathRegexp = /sports\/(\w+(\s+\w+)*)/;
           			let match = pathRegexp.exec($location.path());
 
           			if (match === null || match.length === 0) {
@@ -29,6 +30,10 @@ angular.module("olympics", ["ui.router"])
 
           			return sport === selectedSportName;
 				};
+				this.getImage = function(sport) {
+
+					return "../images/" + sport.split(" ").join("_").toLowerCase() + ".svg";
+				}
 			},
 			controllerAs: "sportsCtrl"
 		})
@@ -61,11 +66,17 @@ angular.module("olympics", ["ui.router"])
 						$state.go("sports.medals", {
 							sportName: $stateParams.sportName
 						});
-					})
-
-					
+					})					
 				}
 			},
 			controllerAs: "newMedalCtrl"
+		})
+		.state("sports.graph", {
+			url: "/graph",
+			templateUrl: "sports/graph-results.html",
+			controller: function($stateParams, $state, $http) {
+				
+			},
+			controllerAs: "graphCtrl"
 		})
 	})

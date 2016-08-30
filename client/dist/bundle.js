@@ -24,7 +24,8 @@ _angular2.default.module("olympics", ["ui.router"]).config(function ($stateProvi
 			this.sports = sportsService.data;
 
 			this.isActive = function (sport) {
-				var pathRegexp = /sports\/(\w+)/;
+
+				var pathRegexp = /sports\/(\w+(\s+\w+)*)/;
 				var match = pathRegexp.exec($location.path());
 
 				if (match === null || match.length === 0) {
@@ -33,6 +34,10 @@ _angular2.default.module("olympics", ["ui.router"]).config(function ($stateProvi
 				var selectedSportName = match[1];
 
 				return sport === selectedSportName;
+			};
+			this.getImage = function (sport) {
+
+				return "../images/" + sport.split(" ").join("_").toLowerCase() + ".svg";
 			};
 		},
 		controllerAs: "sportsCtrl"
@@ -68,6 +73,11 @@ _angular2.default.module("olympics", ["ui.router"]).config(function ($stateProvi
 			};
 		},
 		controllerAs: "newMedalCtrl"
+	}).state("sports.graph", {
+		url: "/graph",
+		templateUrl: "sports/graph-results.html",
+		controller: function controller($stateParams, $state, $http) {},
+		controllerAs: "graphCtrl"
 	});
 });
 

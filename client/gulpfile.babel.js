@@ -18,8 +18,6 @@ gulp.task("transpile", () => {
 
 });
 
-
-
 gulp.task("watch", ["transpile"], () => {
   gulp.watch("src/**/*", ["transpile"]);
 });

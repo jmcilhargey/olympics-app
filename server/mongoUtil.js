@@ -7,8 +7,7 @@ let _db;
 module.exports = {
 
 	connect() {
-		let uri = "mongodb://jmcilhargey:qualcom1@ds059365.mlab.com:59365/joesdb";
-		client.connect(uri, (err, db) => {
+		client.connect("mongodb://jmcilhargey:qualcom1@ds059365.mlab.com:59365/joesdb", (err, db) => {
 			if (err) {
 				console.log("Error connecting to Mongo");
 				process.exit(1);

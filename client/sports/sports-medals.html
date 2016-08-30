@@ -1,16 +1,18 @@
-<h3>{{sportCtrl.sport.name}} Gold Medals</h3>
+<h3>{{sportCtrl.sport.name }} Medal Count</h3>
 
 <table class="table">
   	<thead>
-    	<th>Year</th>
-    	<th>Division</th>
-    	<th>Country</th>
+    	<th>Event</th>
+    	<th>Gold</th>
+    	<th>Silver</th>
+      <th>Bronze</th>
   	</thead>
   	<tbody>
-    	<tr ng-repeat="medal in sportCtrl.sport.goldMedals">
-	      	<td>{{medal.year}}</td>
-	      	<td>{{medal.division}}</td>
-	      	<td>{{medal.country}}</td>
+    	<tr ng-repeat="event in sportCtrl.sport.events">
+	      	<td>{{ event.name }}</td>
+	      	<td>{{ event.medals.gold.athlete }}<br>{{ event.medals.gold.country }}</td>
+	      	<td>{{ event.medals.silver.athlete }}<br>{{ event.medals.silver.country }}</td>
+          <td>{{ event.medals.bronze.athlete }}<br>{{ event.medals.bronze.country }}</td>
     	</tr>
   	</tbody>
 </table>

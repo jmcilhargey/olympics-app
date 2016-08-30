@@ -18,18 +18,18 @@ app.get("/sports", (req, res) => {
 		if (err) {
 			res.sendStatus(400);
 		}
-		
-		console.log(JSON.stringify(docs));
-		let sportNames = docs.map((sport) => sport.name);
+
+		let sportNames = docs.map((entry) => entry.sport);
+
 		res.json(sportNames);
 	});
 });
 
 app.get("/sports/:name", (req, res) => {
 	let sportName = req.params.name;
-
+	
 	let sports = mongoUtil.sports();
-	sports.find({name: sportName}).limit(1).next((err, doc) => {
+	sports.find({sport: sportName}).limit(1).next((err, doc) => {
 
 		if (err) {
 			res.sendStatus(400);
@@ -60,6 +60,6 @@ app.post("/sports/:name/medals", jsonParser, (req, res) => {
 	});
 });
 
-app.listen(process.env.PORT || 5000, () => console.log("Listening on port 8080."));
+app.listen(process.env.PORT || 5000, () => console.log("Listening on port: " + (process.env.PORT || 5000)));
 
 
