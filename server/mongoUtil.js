@@ -7,7 +7,7 @@ let _db;
 module.exports = {
 
 	connect() {
-		client.connect("mongodb://jmcilhargey:qualcom1@ds059365.mlab.com:59365/joesdb", (err, db) => {
+		client.connect(process.env.PROD_MONGODB, (err, db) => {
 			if (err) {
 				console.log("Error connecting to Mongo");
 				process.exit(1);
