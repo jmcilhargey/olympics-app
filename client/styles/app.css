@@ -29,9 +29,13 @@ a {
   color: white;
   display: inline-block;
   line-height: 2.5;
-  padding: 5px 50px;
+  width: 175px;
   margin-bottom: 10px;
   transition: 0.2s ease-in-out;
+}
+
+.btn-graph {
+  margin-left: 10px;
 }
 
 .btn:active,
@@ -66,7 +70,7 @@ a {
 .card-link {
   color: #bfc0c0;
   display: block;
-  padding: 20px;
+  padding: 15px;
   position: relative;
   transition: 0.2s ease-in-out;
 }
@@ -80,7 +84,7 @@ a {
   display: block;
   opacity: 0.25;
   position: absolute;
-  height: 75px;
+  height: 65px;
   right: 10px;
   top: 0;
   transition: 0.2s ease-in-out;
@@ -224,4 +228,9 @@ a {
 
 .mbl {
   margin-bottom: 40px;
+}
+
+canvas {
+  display: block;
+  margin: 20px auto;
 }

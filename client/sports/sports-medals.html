@@ -3,9 +3,9 @@
 <table class="table">
   	<thead>
     	<th>Event</th>
-    	<th>Gold</th>
-    	<th>Silver</th>
-      <th>Bronze</th>
+    	<th><img src="../images/olympic_medal_gold.svg" width="25px">Gold</th>
+    	<th><img src="../images/olympic_medal_silver.svg" width="25px">Silver</th>
+      <th><img src="../images/olympic_medal_bronze.svg" width="25px">Bronze</th>
   	</thead>
   	<tbody>
     	<tr ng-repeat="event in sportCtrl.sport.events">
@@ -18,3 +18,4 @@
 </table>
 
 <a class="btn" ui-sref="sports.new({sportName: sportCtrl.sport.name})">New Medal</a>
+<a class="btn btn-graph" ui-sref="sports.graph">View Graph</a>

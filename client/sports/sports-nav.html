@@ -1,14 +1,12 @@
-<div class="sports-info"  ui-view></div>
-
-<div class="btn">Hi</div>
+<div class="sports-info" ui-view></div>
 
 <div class="cell">
   	<div class="sports-list">
     	<ul class="grid list list--unstyled mbl" ng-cloak>
 	      	<li class="grid-box grid-box--6of12 sport-name" ng-repeat="sport in sportsCtrl.sports">
 	        	<div class="card" ng-class="{'is-active': sportsCtrl.isActive(sport)}">
-		          	<h2 class="card-title"><a class="card-link" ui-sref="sports.medals({ sportName: sport })">
-		              {{ sport }}<img class="card-image" ng-src="{{ sportsCtrl.getImage(sport) }}"></a></h2>
+		          	<h3 class="card-title"><a class="card-link" ui-sref="sports.medals({ sportName: sport })">
+		              {{ sport }}<img class="card-image" ng-src="{{ sportsCtrl.getImage(sport) }}"></a></h3>
 	        	</div>
 	      	</li>
     	</ul>

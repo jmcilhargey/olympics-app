@@ -3,8 +3,8 @@
   <h3 class="mbm">New Medal for {{ newMedalCtrl.sportName }}</h3>
 
   <div class="form-field">
-    <label class="form-label" for="division">Division:</label>
-    <input class="form-input" id="division" required ng-model="medal.division"/>
+    <label class="form-label" for="event">Event:</label>
+    <input class="form-input" id="event" required ng-model="medal.event"/>
   </div>
 
   <div class="form-field">
@@ -12,11 +12,17 @@
     <input class="form-input" id="country" required ng-model="medal.country"/>
   </div>
 
+    <div class="form-field">
+    <label class="form-label" for="athlete">Athlete:</label>
+    <input class="form-input" id="athlete" required ng-model="medal.athlete"/>
+  </div>
+
   <div class="form-field">
-    <label class="form-label" for="year">Year:</label>
+    <label class="form-label" for="year">Type:</label>
     <select class="form-control" id="year" required ng-model="medal.year">
-      <option value="2012">2012</option>
-      <option value="2016">2016</option>
+      <option value="gold">Gold</option>
+      <option value="silver">Silver</option>
+      <option value="bronze">Bronze</option>
     </select>
   </div>
 
